@@ -1,6 +1,6 @@
 /// <reference path="../node_modules/@types/p5/global.d.ts" />
 
-class BALL {
+class SNOWFALL_CHASE {
     width = windowWidth;
     height = windowHeight;
     protected ellipseArr: any[] = [];
@@ -118,20 +118,20 @@ class BALL {
     }
 }
 
-let ball: BALL;
+let snowFallChase: SNOWFALL_CHASE;
 
 function preload() {
-    ball = new BALL();
-    ball.preloadBackground();
+    snowFallChase = new SNOWFALL_CHASE();
+    snowFallChase.preloadBackground();
 }
 
 function setup() {
-    ball.createCanvas();
+    snowFallChase.createCanvas();
 }
 
 function draw() {
-    ball.drawBackground();
-    ball.createBoard();
-    ball.snowEffect();
-    ball.createHitsItem();
+    snowFallChase.drawBackground();
+    snowFallChase.createBoard();
+    snowFallChase.snowEffect();
+    snowFallChase.createHitsItem();
 }
